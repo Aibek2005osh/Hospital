@@ -1,4 +1,22 @@
 package java16.dao;
 
-public class HospitalDao {
+import java16.midels.Hospital;
+import java16.midels.Patient;
+
+import java.util.List;
+import java.util.Map;
+
+public interface HospitalDao {
+
+    String addHospital(Hospital hospital);
+
+    Hospital findHospitalById(Long id);
+
+    List<Hospital> getAllHospital();
+
+    List<Patient> getAllPatientFromHospital(Long id);
+
+    String deleteHospitalById(Long id);
+
+    Map<String, List<Hospital>> getAllHospitalByAddress(String address);
 }
